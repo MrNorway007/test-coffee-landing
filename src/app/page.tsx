@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function CoffeeLanding() {
   const menu = {
@@ -22,6 +23,17 @@ export default function CoffeeLanding() {
 
   return (
     <div className="min-h-screen bg-[#FAF9F6] text-[#4A3728] font-sans">
+      {/* Navigation */}
+      <nav className="absolute top-0 w-full p-6 flex justify-between items-center z-50 text-white">
+        <div className="text-2xl font-serif font-bold">Coffee Haven</div>
+        <div className="space-x-6 flex items-center">
+          <a href="#menu" className="hover:text-gray-300 transition-colors">Menu</a>
+          <Link href="/login" className="bg-white text-[#4A3728] px-4 py-2 rounded-full font-bold text-sm hover:bg-gray-100 transition-colors duration-300">
+            Login
+          </Link>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center text-center bg-cover bg-center bg-fixed" style={{ backgroundColor: '#C6A668' }}>
         <div className="absolute inset-0 bg-black/40"></div>
@@ -69,7 +81,7 @@ export default function CoffeeLanding() {
       {/* Contact Section */}
       <section className="py-20 bg-[#EADDCC] px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-serif font-bold mb-6 text-[#4A3728]">Visit Us Or Get In Touch</h2>
+          <h2 className="text-4xl font-serif font-bold mb-6 text-[#4A372H]">Visit Us Or Get In Touch</h2>
           <p className="text-gray-700 mb-12">Have a question or want to reserve a table? We'd love to hear from you.</p>
           
           <form className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left bg-white p-8 rounded-2xl shadow-xl">
@@ -95,7 +107,7 @@ export default function CoffeeLanding() {
       {/* Footer */}
       <footer className="py-10 text-center text-gray-500 text-sm">
         <p>&copy; 2026 Coffee Haven. All rights reserved.</p>
-      </footer>
+      </footer}
     </div>
   );
 }
